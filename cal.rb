@@ -18,4 +18,13 @@ puts "Put in the operator Ex.(+ - * /)"
 puts "Put in the second number"
 @second_number = gets.to_i
 
-puts "#{@first_number} #{@operator} #{@second_number}"
+case @operator
+  when "+"
+    puts "addition"
+  when "-"
+    puts "minus"
+  when "*"
+    puts "multiple"
+  when "/"
+    puts "divide"
+end
