@@ -20,9 +20,18 @@ def calculator
   puts "Put in the second number"
   @second_number = gets.to_f
 
-  check_add(@operator)
-  @operator = check_add(@operator)
-  
+  if @operator == "+"
+    @operator == "+"
+  elsif @operator == "-"
+    @operator == "-"
+  elsif @operator == "*"
+    @operator == "*"
+  elsif @operator == "/"
+    @operator == "/"
+  else
+    @operator = 1 
+  end
+
   case @operator
     when "+"
       answer = @first_number + @second_number
@@ -42,14 +51,6 @@ def calculator
       puts "#{@first_number} divided by #{@second_number} equals #{answer}"
     when 1
       puts "Sorry that is not an operator please enter one of these *, -, +, /."
-  end
-end
-
-def check_add(operator)
-  if operator == "+"
-    operator = "+"
-  else
-    operator = 1
   end
 end
 
