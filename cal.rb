@@ -22,7 +22,8 @@ def calculator
       answer = @first_number + @second_number
       puts "#{@first_number} + #{@second_number} = #{answer}"
     when "-"
-      puts "minus"
+      answer = @first_number - @second_number
+      puts "#{@first_number} - #{@second_number} = #{answer}"
     when "*"
       puts "multiple"
     when "/"
