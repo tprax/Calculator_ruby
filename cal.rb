@@ -8,24 +8,27 @@
 #minus
 #multiple
 #divide
-
-puts "Welcome to a Calculator"
-puts "-----------------------"
-puts "Put the first number"
-@first_number = gets.to_i
-puts "Put in the operator Ex.(+ - * /)"
-@operator = gets.to_s.strip
-puts "Put in the second number"
-@second_number = gets.to_i
-
-case @operator
-  when "+"
-    puts "addition"
-  when "-"
-    puts "minus"
-  when "*"
-    puts "multiple"
-  when "/"
-    puts "divide"
+def calculator
+  puts "Welcome to a Calculator"
+  puts "-----------------------"
+  puts "Put the first number"
+  @first_number = gets.to_i
+  puts "Put in the operator Ex.(+ - * /)"
+  @operator = gets.to_s.strip
+  puts "Put in the second number"
+  @second_number = gets.to_i
+  case @operator
+    when "+"
+      answer = @first_number + @second_number
+      puts "#{@first_number} + #{@second_number} = #{answer}"
+    when "-"
+      puts "minus"
+    when "*"
+      puts "multiple"
+    when "/"
+      puts "divide"
+  end
 end
+
+calculator
 
