@@ -25,9 +25,11 @@ def calculator
       answer = @first_number - @second_number
       puts "#{@first_number} - #{@second_number} = #{answer}"
     when "*"
-      puts "multiple"
+      answer = @first_number * @second_number
+      puts "#{@first_number} * #{@second_number} = #{answer}"
     when "/"
-      puts "divide"
+      answer = @first_number / @second_number
+      puts "#{@first_number} / #{@second_number} = #{answer}"
   end
 end
 
