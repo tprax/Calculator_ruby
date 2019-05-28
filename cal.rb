@@ -42,7 +42,7 @@ def calculator
       puts "#{@first_number} divided by #{@second_number} equals #{answer}"
       @answers << answer
     else
-      puts "Sorry that is not an operator please enter one of these *, -, +, /."
+      puts "Sorry #{@operator} is not an operator I support. Please enter one of these *, -, +, /."
   end
   puts "Would you like to do another calculation?"
   @continue = gets.to_s.strip
