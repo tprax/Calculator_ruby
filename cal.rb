@@ -52,7 +52,12 @@ def calculator
     when 1
       puts "Sorry that is not an operator please enter one of these *, -, +, /."
   end
+  puts "Would you like to do another calculation?"
+  answer = gets.to_s
 end
 
+while calculator == "yes"
+  calculator
+end
 calculator
 
