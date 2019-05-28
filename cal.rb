@@ -8,7 +8,7 @@
 #minus
 #multiple
 #divide
-
+@answers = []
 
 def calculator
   puts "Welcome to Ruby Calculator"
@@ -28,7 +28,7 @@ def calculator
     @operator == "*"
   elsif @operator == "/"
     @operator == "/"
-  else
+  elsif
     @operator = 1 
   end
 
@@ -37,27 +37,32 @@ def calculator
       answer = @first_number + @second_number
       puts "Calculating..."
       puts "#{@first_number} plus #{@second_number} equals #{answer}"
+      @answers << answer
     when "-"
       answer = @first_number - @second_number
       puts "Calculating..."
       puts "#{@first_number} minus #{@second_number} equals #{answer}"
+      @answers << answer
     when "*"
       answer = @first_number * @second_number
       puts "Calculating..."
       puts "#{@first_number} multiplied by #{@second_number} equals #{answer}"
+      @answers << answer
     when "/"
       answer = @first_number / @second_number
       puts "Calculating..."
       puts "#{@first_number} divided by #{@second_number} equals #{answer}"
+      @answers << answer
     when 1
       puts "Sorry that is not an operator please enter one of these *, -, +, /."
   end
   puts "Would you like to do another calculation?"
-  answer = gets.to_s
+  @continue = gets.to_s.strip
 end
 
-while calculator == "yes"
+calculator
+
+while @continue == "yes"
   calculator
 end
-calculator
 
