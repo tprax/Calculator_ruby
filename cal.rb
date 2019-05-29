@@ -8,6 +8,7 @@
 #minus
 #multiple
 #divide
+require 'pry'
 @answers = []
 
 def calculator
